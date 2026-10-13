@@ -1,0 +1,14 @@
+{
+    "printWidth": 70,
+    "tabWidth": 4,
+    "useTabs": true,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "preserve",
+    "trailingComma": "es5",
+    "bracketSpacing": false,
+    "arrowParens": "always",
+    "objectWrap": "collapse",
+    "experimentalOperatorPosition": "end",
+    "endOfLine": "lf"
+}
