@@ -1,0 +1,40 @@
+[0m
+[4mC:\Users\1vlad\Desktop\Lab04_Zaporoshchenko_ART\src\app.js[24m
+   [2m57:9[22m   [33mwarning[39m  Do not nest ternary expressions                                              [2mno-nested-ternary[22m
+   [2m71:4[22m   [33mwarning[39m  Assignment (=) can be replaced with operator assignment (+=)                 [2moperator-assignment[22m
+   [2m84:1[22m   [31merror[39m    Function 'calculateOrder' has too many parameters (6). Maximum allowed is 3  [2mmax-params[22m
+  [2m102:3[22m   [33mwarning[39m  Assignment (=) can be replaced with operator assignment (+=)                 [2moperator-assignment[22m
+  [2m103:3[22m   [33mwarning[39m  Assignment (=) can be replaced with operator assignment (+=)                 [2moperator-assignment[22m
+  [2m119:2[22m   [33mwarning[39m  Unexpected negated condition                                                 [2mno-negated-condition[22m
+  [2m121:9[22m   [31merror[39m    Unnecessary 'else' after 'return'                                            [2mno-else-return[22m
+  [2m128:9[22m   [31merror[39m    Unnecessary 'else' after 'return'                                            [2mno-else-return[22m
+  [2m136:7[22m   [33mwarning[39m  Assignment (=) can be replaced with operator assignment (+=)                 [2moperator-assignment[22m
+  [2m160:1[22m   [31merror[39m    Function 'specialPrice' has too many parameters (6). Maximum allowed is 3    [2mmax-params[22m
+  [2m163:10[22m  [31merror[39m    'brokenExamplesNotCalled' is defined but never used                          [2mno-unused-vars[22m
+  [2m165:8[22m   [31merror[39m    'unusedLabel' is assigned a value but never used                             [2mno-unused-vars[22m
+  [2m166:22[22m  [31merror[39m    'unknownPrice' is not defined                                                [2mno-undef[22m
+  [2m167:6[22m   [31merror[39m    The value assigned to 'status' is not used in subsequent statements          [2mno-useless-assignment[22m
+  [2m168:5[22m   [31merror[39m    Expected a conditional expression and instead saw an assignment              [2mno-cond-assign[22m
+  [2m168:5[22m   [31merror[39m    Unexpected constant condition                                                [2mno-constant-condition[22m
+  [2m171:10[22m  [31merror[39m    'unreachableExample' is defined but never used                               [2mno-unused-vars[22m
+  [2m173:2[22m   [31merror[39m    Unreachable code                                                             [2mno-unreachable[22m
+  [2m175:10[22m  [31merror[39m    'duplicateKeysExample' is defined but never used                             [2mno-unused-vars[22m
+  [2m176:34[22m  [31merror[39m    Duplicate key 'name'                                                         [2mno-dupe-keys[22m
+  [2m179:10[22m  [31merror[39m    'duplicateCaseExample' is defined but never used                             [2mno-unused-vars[22m
+  [2m182:2[22m   [31merror[39m    Duplicate case label                                                         [2mno-duplicate-case[22m
+  [2m187:10[22m  [31merror[39m    'selfAssignmentExample' is defined but never used                            [2mno-unused-vars[22m
+  [2m189:9[22m   [31merror[39m    'points' is assigned to itself                                               [2mno-self-assign[22m
+  [2m192:10[22m  [31merror[39m    'emptyBlockExample' is defined but never used                                [2mno-unused-vars[22m
+  [2m194:13[22m  [31merror[39m    Empty block statement                                                        [2mno-empty[22m
+  [2m197:10[22m  [31merror[39m    'sparseArrayExample' is defined but never used                               [2mno-unused-vars[22m
+  [2m198:19[22m  [31merror[39m    Unexpected comma in middle of array                                          [2mno-sparse-arrays[22m
+  [2m201:10[22m  [31merror[39m    'unnecessaryInitExample' is defined but never used                           [2mno-unused-vars[22m
+  [2m202:6[22m   [31merror[39m    It's not necessary to initialize 'previous' to undefined                     [2mno-undef-init[22m
+  [2m202:6[22m   [31merror[39m    The value assigned to 'previous' is not used in subsequent statements        [2mno-useless-assignment[22m
+  [2m203:6[22m   [31merror[39m    It's not necessary to initialize 'temporary' to undefined                    [2mno-undef-init[22m
+  [2m203:6[22m   [31merror[39m    The value assigned to 'temporary' is not used in subsequent statements       [2mno-useless-assignment[22m
+  [2m208:10[22m  [31merror[39m    'manualFormattingExamples' is defined but never used                         [2mno-unused-vars[22m
+
+[31m[1m✖ 34 problems (28 errors, 6 warnings)[22m[39m
+[31m[1m  4 errors and 4 warnings potentially fixable with the `--fix` option.[22m[39m
+[0m
