@@ -1,5 +1,5 @@
 // Лабораторна робота № 4. Варіант 23. Зоомагазин.
-// Початкова версія: помилки внесені навмисно для дослідження.
+// Підсумкова версія після перевірок Prettier та ESLint.
 const products = [
 	{
 		id: 1,
@@ -115,7 +115,9 @@ function getLowStockProducts(limit) {
 	return products.filter((item) => item.stock < limit)
 }
 function getStockStatus(stock) {
-	return stock > 10 ? 'Достатньо' : stock > 0 ? 'Мало' : 'Немає'
+	if (stock > 10) return 'Достатньо'
+	if (stock > 0) return 'Мало'
+	return 'Немає'
 }
 function getSaleTag(product) {
 	if (product.price > 200) return 'Преміум'
@@ -135,21 +137,16 @@ function getCartSubtotal(cart) {
 	return result
 }
 function calculateDiscount(subtotal, discountRate) {
-	// Л1: помилка — замість 10% фактично застосовано 20%.
-	return subtotal * discountRate * 2
+	// Виправлено Л1: використовуємо передану ставку знижки.
+	return subtotal * discountRate
 }
 function calculateDelivery(subtotal) {
-	// Л2: помилка — безкоштовна доставка має бути від 300 грн.
-	return subtotal > 350 ? 0 : 45
+	// Виправлено Л2: від 300 грн доставка безкоштовна.
+	return subtotal >= 300 ? 0 : 45
 }
-function calculateOrder(
-	cart,
-	discountRate,
-	customerName,
-	streetAddress,
-	city,
-	deliveryMethod
-) {
+function calculateOrder(cart, discountRate, customer) {
+	const {customerName, streetAddress, city, deliveryMethod} =
+		customer
 	const subtotal = getCartSubtotal(cart)
 	const discount = calculateDiscount(subtotal, discountRate)
 	const delivery = calculateDelivery(subtotal)
@@ -237,77 +234,9 @@ function inspectCart(cart) {
 function isPremium(product) {
 	return product.price > 200
 }
-function specialPrice(
-	price,
-	quantity,
-	discount,
-	tax,
-	delivery,
-	extra
-) {
+function specialPrice(price, quantity, costs) {
+	const {discount, tax, delivery, extra} = costs
 	return price * quantity - discount + tax + delivery + extra
-}
-function brokenExamplesNotCalled() {
-	// Група К: приклади, що не виконуються у головній програмі.
-	const unusedLabel = 'не використовується'
-	const missingResult = unknownPrice + 5
-	let status = 'waiting'
-	if ((status = 'sent')) return missingResult
-	return status
-}
-function unreachableExample() {
-	return 'Стоп'
-	console.log('Недосяжний рядок')
-}
-function duplicateKeysExample() {
-	const duplicated = {name: 'Перший', name: 'Другий'}
-	return duplicated
-}
-function duplicateCaseExample(value) {
-	switch (value) {
-		case 1:
-			return 'Один'
-		case 1:
-			return 'Повтор'
-		case 2:
-			return 'Два'
-		default:
-			return 'Інше'
-	}
-}
-function selfAssignmentExample() {
-	let points = 3
-	points = points
-	return points
-}
-function emptyBlockExample() {
-	const enabled = true
-	if (enabled) {
-	}
-	return enabled
-}
-function sparseArrayExample() {
-	const ratings = [5, , 3]
-	return ratings.length
-}
-function unnecessaryInitExample() {
-	let previous
-	let temporary
-	previous = 3
-	temporary = 4
-	return previous + temporary
-}
-function manualFormattingExamples() {
-	let first = 1
-	let second = 2
-	console.log(first + second)
-	const mixed = {first: 1, second: 2}
-	const example = {name: 'test', count: 4, enabled: true}
-	const unneededObject = {a: 1}
-	const otherObject = {b: 2}
-	return (
-		mixed.first + example.count + unneededObject.a + otherObject.b
-	)
 }
 function veryLongCondition(product) {
 	const valid =
@@ -380,7 +309,14 @@ function runReport() {
 	console.log('Перевірка заявки: ' + getMessage(true))
 	console.log(
 		'Приклад знижки: ' +
-			formatMoney(specialPrice(100, 2, 10, 0, 0, 0))
+			formatMoney(
+				specialPrice(100, 2, {
+					discount: 10,
+					tax: 0,
+					delivery: 0,
+					extra: 0,
+				})
+			)
 	)
 	console.log('Технічна мітка: ' + getDisplayTitle())
 	console.log('Позицій у знімку: ' + getInventorySnapshot().length)
@@ -404,12 +340,11 @@ const selectedCart = [
 	{id: 1, quantity: 2},
 	{id: 3, quantity: 1},
 ]
-const orderDetails = calculateOrder(
-	selectedCart,
-	0.1,
-	'Марія Іваненко',
-	'вул. Шевченка, 12, квартира 5',
-	'Запоріжжя',
-	"кур'єрська доставка до дверей"
-)
+const customer = {
+	customerName: 'Марія Іваненко',
+	streetAddress: 'вул. Шевченка, 12, квартира 5',
+	city: 'Запоріжжя',
+	deliveryMethod: "кур'єрська доставка до дверей",
+}
+const orderDetails = calculateOrder(selectedCart, 0.1, customer)
 runReport()
