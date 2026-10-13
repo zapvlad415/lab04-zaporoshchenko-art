@@ -1,0 +1,27 @@
+[0m
+[4mC:\Users\1vlad\Desktop\Lab04_Zaporoshchenko_ART\src\app.js[24m
+  [2m118:9[22m   [33mwarning[39m  Do not nest ternary expressions                                              [2mno-nested-ternary[22m
+  [2m145:1[22m   [31merror[39m    Function 'calculateOrder' has too many parameters (6). Maximum allowed is 3  [2mmax-params[22m
+  [2m242:1[22m   [31merror[39m    Function 'specialPrice' has too many parameters (6). Maximum allowed is 3    [2mmax-params[22m
+  [2m252:10[22m  [31merror[39m    'brokenExamplesNotCalled' is defined but never used                          [2mno-unused-vars[22m
+  [2m254:8[22m   [31merror[39m    'unusedLabel' is assigned a value but never used                             [2mno-unused-vars[22m
+  [2m255:24[22m  [31merror[39m    'unknownPrice' is not defined                                                [2mno-undef[22m
+  [2m256:6[22m   [31merror[39m    The value assigned to 'status' is not used in subsequent statements          [2mno-useless-assignment[22m
+  [2m257:7[22m   [31merror[39m    Unexpected constant condition                                                [2mno-constant-condition[22m
+  [2m260:10[22m  [31merror[39m    'unreachableExample' is defined but never used                               [2mno-unused-vars[22m
+  [2m262:2[22m   [31merror[39m    Unreachable code                                                             [2mno-unreachable[22m
+  [2m264:10[22m  [31merror[39m    'duplicateKeysExample' is defined but never used                             [2mno-unused-vars[22m
+  [2m265:38[22m  [31merror[39m    Duplicate key 'name'                                                         [2mno-dupe-keys[22m
+  [2m268:10[22m  [31merror[39m    'duplicateCaseExample' is defined but never used                             [2mno-unused-vars[22m
+  [2m272:3[22m   [31merror[39m    Duplicate case label                                                         [2mno-duplicate-case[22m
+  [2m280:10[22m  [31merror[39m    'selfAssignmentExample' is defined but never used                            [2mno-unused-vars[22m
+  [2m282:11[22m  [31merror[39m    'points' is assigned to itself                                               [2mno-self-assign[22m
+  [2m285:10[22m  [31merror[39m    'emptyBlockExample' is defined but never used                                [2mno-unused-vars[22m
+  [2m287:15[22m  [31merror[39m    Empty block statement                                                        [2mno-empty[22m
+  [2m291:10[22m  [31merror[39m    'sparseArrayExample' is defined but never used                               [2mno-unused-vars[22m
+  [2m292:22[22m  [31merror[39m    Unexpected comma in middle of array                                          [2mno-sparse-arrays[22m
+  [2m295:10[22m  [31merror[39m    'unnecessaryInitExample' is defined but never used                           [2mno-unused-vars[22m
+  [2m302:10[22m  [31merror[39m    'manualFormattingExamples' is defined but never used                         [2mno-unused-vars[22m
+
+[31m[1m✖ 22 problems (21 errors, 1 warning)[22m[39m
+[0m

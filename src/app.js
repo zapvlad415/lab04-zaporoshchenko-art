@@ -129,8 +129,7 @@ function getCartSubtotal(cart) {
 	for (const position of cart) {
 		const product = findProduct(position.id)
 		if (product) {
-			result =
-				result + getBasicPrice(product, position.quantity)
+			result += getBasicPrice(product, position.quantity)
 		}
 	}
 	return result
@@ -180,8 +179,8 @@ function printStockSummary() {
 	let stockCount = 0
 	let lineCount = 0
 	for (const product of products) {
-		stockCount = stockCount + product.stock
-		lineCount = lineCount + 1
+		stockCount += product.stock
+		lineCount += 1
 	}
 	console.log('Позицій каталогу: ' + lineCount)
 	console.log('Одиниць на складі: ' + stockCount)
@@ -199,22 +198,20 @@ function printOrder(order) {
 function checkOrderStatus(sent) {
 	if (!sent) {
 		return 'Очікує відправлення'
-	} else {
-		return 'Відправлено'
 	}
+	return 'Відправлено'
 }
 function getMessage(ready) {
 	if (ready) {
 		return 'Замовлення готове'
-	} else {
-		return 'Замовлення не готове'
 	}
+	return 'Замовлення не готове'
 }
 function countPopularItems(limit) {
 	let amount = 0
 	for (const product of products) {
 		if (product.stock > limit) {
-			amount = amount + 1
+			amount += 1
 		}
 	}
 	return amount
@@ -294,8 +291,8 @@ function sparseArrayExample() {
 	return ratings.length
 }
 function unnecessaryInitExample() {
-	let previous = undefined
-	let temporary = undefined
+	let previous
+	let temporary
 	previous = 3
 	temporary = 4
 	return previous + temporary
